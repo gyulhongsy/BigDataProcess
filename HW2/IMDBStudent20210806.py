@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 
+import sys
+
 genre = ""
 genreDict = {}
-inFile, outFile = input().split()
+inFile = sys.argv[1]
+outFile = sys.argv[2]
+
 fr = open(inFile, "rt")
 
 for line in fr:
