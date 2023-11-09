@@ -2,8 +2,8 @@
 
 genre = ""
 genreDict = {}
-fileName = input('파일 이름을 입력하시오 ')
-fr = open(fileName, "rt")
+inFile, outFile = input().split()
+fr = open(inFile, "rt")
 
 for line in fr:
     info = line.split("::")
@@ -17,7 +17,7 @@ for line in fr:
             genreDict[name] += 1
 fr.close()
 
-fw = open("movieoutput.txt", "wt")
+fw = open(outFile, "wt")
 for item in genreDict:
     fw.write(str(item) +" "+ str(genreDict.get(item)))
     fw.write("\n")
